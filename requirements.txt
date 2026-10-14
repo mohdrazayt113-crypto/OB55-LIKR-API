@@ -1,8 +1,13 @@
 Flask[async]
 requests
 aiohttp
+httpx
+protobuf
 googleapis-common-protos
 pycryptodome
-protobuf
+six
 Werkzeug
-pytz
+pymongo
+dnspython
+python-dotenv
+apscheduler
