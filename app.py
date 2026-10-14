@@ -27,13 +27,13 @@ used_count = 0
 def load_tokens(region):
     try:
         if region == "IND":
-            with open("token_ind.json", "r") as f:
+            with open("tokens_ind.json", "r") as f:
                 tokens = json.load(f)
         elif region in {"BR", "US", "SAC", "NA"}:
-            with open("token_br.json", "r") as f:
+            with open("tokens_br.json", "r") as f:
                 tokens = json.load(f)
         else:
-            with open("token_bd.json", "r") as f:
+            with open("tokens_bd.json", "r") as f:
                 tokens = json.load(f)
         return tokens
     except Exception as e:
