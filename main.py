@@ -132,12 +132,12 @@ async def main():
                 print(f"❌ UID #{res['index'] + 1} {res['account']['uid']} - टोकन जेनरेट नहीं हो सका।")
 
     # परिणामी टोकन को फ़ाइलों में सेव करें (सिर्फ उन रीजन के लिए जिनमें डेटा है)
-    for region, tokens in result.items():
-        if tokens:
-            filename = f'tokens_{region.lower()}.json'
+    for region, token in result.items():
+        if token:
+            filename = f'token_{region.lower()}.json'
             with open(filename, 'w') as f:
-                json.dump(tokens, f, indent=2)
-            print(f"💾 {len(tokens)} टोकन {filename} में सेव किए गए।")
+                json.dump(token, f, indent=2)
+            print(f"💾 {len(token)} टोकन {filename} में सेव किए गए।")
 
     # --- विस्तृत सारांश प्रिंट करें ---
     total_time = time.time() - start_time
